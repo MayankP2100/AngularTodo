@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <hr>
+  <h1 class="text-center fw-semibold mb-4"><u>TODOs</u></h1>
+  @for (todo of todos; track $index) {
+    <li class="fs-4 align-content-around mb-1" style="text-indent: -1.5em">
+      <span>
+        {{ todo }}
+        <button (click)="removeTodo($index)" class="btn btn-outline-danger float-end mx-2">
+          <i class="fa fa-trash"></i>
+        </button>
+      </span>
+      <hr>
+    </li>
+  } @empty {
+    <div class="text-center">
+      <p class="fs-2 my-5">TODOs are empty</p>
+      <i class="fa-5x fa-solid fa-list-ul"></i>
+    </div>
+  }
+</div>
+<app-add class="fixed-bottom" (todo)="addTodo($event)"></app-add>

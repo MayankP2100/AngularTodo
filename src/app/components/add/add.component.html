@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <div class="form-floating mb-5">
+        <input type="text" class="form-control border-primary"
+               id="floatingInputValue" #todo>
+        <label class="fw-medium" for="floatingInputValue">
+          Add a todo
+        </label>
+      </div>
+    </div>
+    <div class="col-2 fs-1">
+      <button class="btn btn-outline-primary p-3 align-top"
+              (click)="this.addTodo(todo.value)">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+  </div>
+</div>
